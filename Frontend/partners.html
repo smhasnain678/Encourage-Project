@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCOURAGE 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".objective-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                loop: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        });
+    </script>
+
+<body>
+    <div class="container-fluid nav-hero">
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <!-- Topbar -->
+        <div class="topbar" id="topbar" data-aos="fade-down" data-aos-delay="100">
+            <div class="topbar-content">
+                <div class="topbar-left"><a href="mailto:info@encourage2026.org" class="topbar-item"> <i
+                            class="fas fa-envelope"></i> <span id="contact-email">info@encourage2026.org</span> </a>
+                    <a href="tel:+923001234567" class="topbar-item"> <i class="fas fa-phone"></i> <span
+                            id="contact-phone">+92 300 1234567</span> </a>
+                </div>
+                <div class="topbar-right"><a href="#tickets" class="tickets-btn"> <i class="fas fa-ticket-alt"></i>
+                        GET
+                        TICKETS </a>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div id="navbar-placeholder"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <section class="partners-hero">
+            <div class="decorative-shape partners-shape-1"></div>
+            <div class="decorative-shape partners-shape-2"></div>
+            <div class="decorative-shape partners-shape-3"></div>
+            <div class="partners-hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="partners-hero-heading" id="partnersHeroHeading">Our Valued Partners &amp; Collaborators</h1>
+                <p class="partners-hero-subheading" id="partnersHeroSubheading">Organizations supporting undergraduate
+                    research,
+                    innovation, and academic excellence through ENCOURAGE 2026.</p><a href="#" class="hero-cta-btn"
+                    id="ctaButton" data-aos="zoom-in" data-aos-delay="200">Become a Partner</a>
+            </div>
+        </section>
+        <!-- Partners Logos Section -->
+        <section class="partners-section">
+            <h2 class="partners-section-title" id="partnersSectionTitle" data-aos="fade-up">Trusted By Leading
+                Organizations</h2>
+            <div class="partners-grid">
+                <a href="https://CSSP.org.pk/" target="_blank" rel="noopener noreferrer" class="partner-card"
+                    data-aos="zoom-in" data-aos-delay="100">
+                    <div class="partner-logo">
+                        <img src="assets/cssp.png" alt="">
+                    </div>
+                    <p class="partner-name">Civil Society Support Program</p>
+                </a>
+                <a href="https://www.indusearthtrust.org/" target="_blank" rel="noopener noreferrer"
+                    class="partner-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="partner-logo">
+                        <img src="assets/iet.png" alt="">
+                    </div>
+                    <p class="partner-name">Indus Earth Trust</p>
+                </a>
+                <a href="https://iris.org.pk/" target="_blank" rel="noopener noreferrer" class="partner-card"
+                    data-aos="zoom-in" data-aos-delay="150">
+                    <div class="partner-logo">
+                        <img src="assets/iris.png" alt="">
+                    </div>
+                    <p class="partner-name">Institute for Research and Integrated Sustainability</p>
+                </a>
+                <a href="https://irisxoft.com/" target="_blank" rel="noopener noreferrer" class="partner-card"
+                    data-aos="zoom-in" data-aos-delay="250">
+                    <div class="partner-logo">
+                        <img src="assets/irisxost.png" alt="">
+                    </div>
+                    <p class="partner-name">IRIS Software Solution</p>
+                </a>
+                <a href="https://hsndesign.iris.org.pk/" target="_blank" rel="noopener noreferrer" class="partner-card"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="partner-logo">
+                        <h4 class="Hsn-Design">HSNDesign</h4>
+                    </div>
+                    <p class="partner-name">HSN Design Studio</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- News letter -->
+    <div id="newsletter-placeholder"></div>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- <script>
+        window.addEventListener("load", () => {
+            new LocomotiveScroll({
+                el: document.querySelector("#main"),
+                smooth: true
+            });
+        });
+    </script> -->
+    <script>
+        gsap.utils.toArray("section").forEach(section => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 60,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%"
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+            easing: "ease-in-out",
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Elements SDK -->
+    <script src="script.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+</body>
+
+</html>
