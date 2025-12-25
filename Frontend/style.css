@@ -263,10 +263,21 @@ body {
     transform: translateY(0);
 }
 
-.nav-dropdown:hover i {
+.nav-dropdown.show-dropdown .dropdown-menu-custom {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: block;
+    /* Mobile par stack karne ke liye */
+}
+
+.nav-dropdown.show-dropdown i {
     transform: rotate(180deg);
 }
 
+.nav-dropdown:hover i {
+    transform: rotate(180deg);
+}
 
 .navbar-main {
     position: fixed;
@@ -461,6 +472,12 @@ body {
 @media (min-width: 992px) {
     .navbar-collapse {
         display: flex !important;
+        /* Yeh bachi hui sari jagah le lega */
+        flex-basis: auto;
+        flex-grow: 1;
+        /* Links ko center karne ke liye Space-Between ka logic */
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar .collapse {
@@ -469,14 +486,23 @@ body {
 
     .nav-links {
         display: flex !important;
+        /* ★ Yeh magic line links ko absolute center mein rakhegi */
+        margin-left: auto;
+        margin-right: auto;
         gap: 25px;
-        align-items: center;
     }
 
     .nav-auth {
-        display: flex !important;
-        align-items: center;
-        gap: 10px;
+        /* Auth ko right side par chipkaye rakhega */
+        margin-left: 0;
+        min-width: 150px;
+        /* Logo ki width ke approx taake balance rahay */
+        justify-content: flex-end;
+    }
+
+    .navbar-logo {
+        min-width: 150px;
+        /* Balance ke liye */
     }
 
     /* .mobile-toggle {
@@ -542,8 +568,18 @@ body {
 
     .navbar-collapse.show {
         transform: scaleY(1);
-        /* display: block; */
+        display: block;
         opacity: 1;
+    }
+
+    .nav-auth {
+        margin-top: 20px;
+        /* Mobile menu mein thora gap */
+        justify-content: flex-start;
+        width: 100%;
+        border-top: 1px solid #eee;
+        /* Optional: Separator line */
+        padding-top: 15px;
     }
 }
 
