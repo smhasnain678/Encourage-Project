@@ -2671,18 +2671,9 @@ body {
     display: inline-block;
 }
 
-.title-underline {
-    width: 120px;
-    height: 5px;
-    background: linear-gradient(90deg, #F5A623 0%, #D05328 50%, #008040 100%);
-    border-radius: 3px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-.schedule-subtitle {
-    font-size: 1.3rem;
-    color: #495057;
+.sch-head-sub {
+    font-size: 1rem;
+    color: #6b7280;
     line-height: 1.7;
     margin-bottom: 2.5rem;
     max-width: 95%;
@@ -2730,7 +2721,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Timeline Visual */
 .schedule-visual-container {
     display: flex;
     align-items: center;
@@ -2911,20 +2901,30 @@ body {
     }
 
     .schedule-info-cards {
-        gap: 15px;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 18px !important;
+        justify-content: space-between;
     }
 
     .info-card {
-        flex: 1 1 calc(50% - 10px);
-        min-width: auto;
+        min-width: 0 !important;
+        flex: 1 1 0;
+        padding: 15px 5px !important;
     }
 
     .info-card-number {
-        font-size: 1.875rem;
+        font-size: 1.2rem !important;
+    }
+
+    .info-card-label {
+        font-size: 11px !important;
+        white-space: nowrap;
     }
 
     .schedule-visual-container {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .timeline-card {
@@ -2937,15 +2937,25 @@ body {
 }
 
 @media (max-width: 576px) {
-    .schedule-page-title {
-        font-size: 1.875rem;
+    .schedule-hero-wrapper {
+        margin-top: 80px;
+        padding: 0px;
     }
 
-    .schedule-subtitle {
-        font-size: 1rem;
+    .schedule-page-title {
+        font-size: 1.85rem;
+    }
+
+    .sch-head-sub {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
     .hero-badges {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
         gap: 10px;
     }
 
@@ -2954,8 +2964,32 @@ body {
         font-size: 0.85rem;
     }
 
+    .schedule-info-cards {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        justify-content: space-between;
+    }
+
     .info-card {
-        flex: 1 1 100%;
+        min-width: 0 !important;
+        flex: 1 1 0;
+        padding: 15px 5px !important;
+    }
+
+    .info-card-number {
+        font-size: 1.2rem !important;
+    }
+
+    .info-card-label {
+        font-size: 11px !important;
+        white-space: nowrap;
+    }
+
+    .schedule-visual-container {
+        margin-top: 8px;
+        padding: 0 0 20px;
     }
 
     .timeline-card {
@@ -3182,7 +3216,6 @@ body {
     font-size: 13px;
 }
 
-/* Schedule Items */
 .schedule-items {
     display: flex;
     flex-direction: column;
@@ -3490,7 +3523,6 @@ body {
     font-size: 18px;
 }
 
-/* Responsive Design */
 @media (max-width: 991px) {
     .vertical-heading-container {
         min-height: auto;
@@ -3559,6 +3591,19 @@ body {
         gap: 16px;
     }
 
+    .color-bars {
+        display: none;
+    }
+
+    .bottom-accent {
+        display: none;
+    }
+
+    .vertical-heading-container {
+        padding: 40px 0 0;
+    }
+
+
     .day-badge {
         width: 70px;
         height: 70px;
@@ -3603,7 +3648,13 @@ body {
 
 @media (max-width: 576px) {
     .vertical-heading {
-        font-size: 28px;
+        font-size: 25px;
+        letter-spacing: 1px;
+        line-height: 2px;
+    }
+
+    .vertical-heading-container {
+        padding: 40px 0 0;
     }
 
     .schedule-title {
@@ -3611,18 +3662,12 @@ body {
     }
 
     .color-bars {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
 
-    .bar {
-        width: 6px;
-        height: 50px;
-    }
+    .bottom-accent {
+        display: none;
 
-    .bar-accent {
-        width: 6px;
-        height: 80px;
     }
 
     .speaker-image {
