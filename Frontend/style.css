@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* In your main CSS file */
-@import 'locomotive-scroll/dist/locomotive-scroll.css';
+/* @import 'locomotive-scroll/dist/locomotive-scroll.css'; */
 
 .primary-color {
     /* color: #F5A623; */
@@ -2296,55 +2296,12 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .speakers-hero-section {
-        padding: 60px 0 50px;
-    }
-
-    .hero-main-title {
-        font-size: 2.3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.05rem;
-        margin-bottom: 28px;
-    }
-
-    .speaker-count-badge {
-        padding: 12px 28px;
-        font-size: 0.95rem;
-    }
-
-    .hero-container {
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-main-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .decorative-accent {
-        width: 60px;
-        height: 4px;
-    }
-
-    .visual-wrapper {
-        max-width: 320px;
-    }
-}
-
 .container {
     position: relative;
     z-index: 1;
 }
 
-.section-header {
+.speaker-section-header {
     text-align: center;
     margin-bottom: 60px;
 }
@@ -2517,12 +2474,53 @@ body {
 }
 
 @media (max-width: 768px) {
+    .speakers-hero-section {
+        padding: 0px 0 50px;
+    }
+
+    .hero-main-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+    }
+
+    .speaker-count-badge {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+    }
+
+    .hero-text-content {
+        max-width: 768px;
+    }
+
+    .nav-tabs {
+        display: flex !important;
+        flex-direction: row !important;
+        /* Force karega ek line mein rehne ke liye */
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .nav-tabs .nav-item {
+        flex: 0 1 auto;
+        width: auto;
+        /* Width auto rakhein taake content ke hisaab se fit ho */
+    }
+
     .speakers-section {
         padding: 60px 0;
     }
 
     .speaker-section-title {
-        font-size: 32px;
+        font-size: 40px;
+        font-weight: 600;
     }
 
     .section-subtitle {
@@ -2544,6 +2542,106 @@ body {
         margin-bottom: 30px;
     }
 }
+
+@media (max-width: 767px) {
+    .nav-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        /* Buttons ko wrap karne ke liye */
+        justify-content: space-between;
+        gap: 10px 0;
+        /* Rows ke beech me thoda gap */
+    }
+
+    .nav-tabs .nav-item {
+        width: 48%;
+        /* Takriban 50%, taake 1 row me 2 buttons aayein */
+        margin: 0 !important;
+        /* Purane margins hata dega */
+    }
+
+    .nav-tabs .nav-link {
+        width: 100%;
+        /* Button apni parent 'li' ki puri jagah lega */
+        margin: 0;
+        text-align: center;
+        padding: 10px 5px;
+        /* Mobile par padding thodi kam */
+        font-size: 13px;
+        /* Mobile readability ke liye */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-container {
+        padding: 30px 0 0px;
+    }
+
+    .speakers-hero-wrapper {
+        margin-top: 0px;
+        gap: 50px;
+    }
+
+    .hero-main-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .decorative-accent {
+        width: 60px;
+        height: 4px;
+    }
+
+    .visual-wrapper {
+        max-width: 320px;
+    }
+
+    .speakers-section {
+        padding: 20px 8px;
+    }
+
+    .speaker-section-title {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .speaker-section-header {
+        margin-bottom: 30px 0 20px;
+    }
+
+    .speaker-section-header p {
+        font-size: 15px;
+    }
+
+    .speaker-image-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .speaker-card {
+        padding: 15px;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .speaker-name {
+        font-size: 16px;
+    }
+
+    .speaker-title {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+    }
+
+    .speaker-bio {
+        font-size: 12px;
+    }
+}
+
 
 
 /* News letter */
@@ -3670,10 +3768,10 @@ body {
 
     }
 
-    .speaker-image {
+    /* .speaker-image {
         width: 140px;
         height: 140px;
-    }
+    } */
 
     .day-badge {
         width: 60px;
@@ -3691,7 +3789,6 @@ body {
 
 
 /* Partners */
-
 .page-wrapper {
     width: 100%;
     height: 100%;
@@ -3933,10 +4030,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .partners-hero-heading {
-        font-size: 2.5rem;
-    }
-
     .partners-hero-subheading {
         font-size: 1.1rem;
     }
@@ -3945,34 +4038,62 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+}
 
+@media (max-width: 768px) {
     .partners-section-title {
-        font-size: 2rem;
+        font-size: 32px;
+    }
+
+    .partner-name {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 576px) {
     .partners-hero {
-        padding: 60px 20px 50px;
+        padding: 70px 20px 20px;
         min-height: 400px;
     }
 
     .partners-hero-heading {
-        font-size: 2rem;
+        font-size: 1.85rem;
+    }
+
+    .partners-section {
+        width: 100%;
+        padding: 30px 20px;
+        background: #FFFFFF;
     }
 
     .partners-hero-subheading {
-        font-size: 1rem;
+        font-size: 16px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0px;
+    }
+
+    .partners-section-title {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .partner-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .partner-logo .Hsn-Design {
+        font-size: 16px;
     }
 
     .hero-cta-btn {
         padding: 12px 30px;
         font-size: 1rem;
-    }
-
-    .partners-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
     }
 
     .partner-card {
@@ -4352,7 +4473,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Category Card Styling */
 .faq-category-card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
@@ -4427,6 +4547,50 @@ body {
     border-top: none;
 }
 
+@media (max-width: 768px) {
+    .faq-category-card {
+        padding: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.25rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-wrapper {
+        margin-top: 80px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+    }
+
+    .faq-category-card {
+        padding: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.25rem;
+    }
+
+    .page-title {
+        font-size: 1.85rem;
+    }
+
+    .contact-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
 /* Contact Section */
 .contact-section {
     /* background: linear-gradient(135deg, #0C3B78 0%, #104d9c 100%); */
@@ -4463,25 +4627,6 @@ body {
     color: #4c51bf;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .faq-category-card {
-        padding: 1.5rem;
-    }
-
-    .category-title {
-        font-size: 1.25rem;
-    }
-
-    .page-title {
-        font-size: 2rem;
-    }
-
-    .contact-section {
-        padding: 2rem 1.5rem;
-    }
 }
 
 

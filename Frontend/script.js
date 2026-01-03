@@ -50,45 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500); // Thora delay taake HTML puri tarah inject ho jaye
 });
 
-
-dropdownLink.addEventListener('click', function (e) {
-    if (window.innerWidth <= 991) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // If already open → just close it (without forcing menu open)
-        if (dropdownWrapper.classList.contains('show-dropdown')) {
-            dropdownWrapper.classList.remove('show-dropdown');
-            return;
-        }
-
-        // Otherwise open menu + dropdown
-        if (!mobileMenu.classList.contains('show')) {
-            mobileMenu.classList.add('show');
-        }
-        dropdownWrapper.classList.add('show-dropdown');
-    }
-});
-
-
 window.addEventListener("scroll", function () {
-    const navbar = document.querySelector("nav.navbar-main");
+    const navbar = document.querySelector(".navbar-main");
     const topbar = document.querySelector(".topbar");
 
     const scrollY = window.scrollY;
     const topbarHeight = topbar ? topbar.offsetHeight : 0;
 
-    // Add scrolled class when user scrolls past topbar
     if (scrollY > topbarHeight) {
-        topbar.style.transform = "translateY(-100%)";
-        topbar.style.opacity = "0";
-        navbar.classList.add("scrolled");
+        if (topbar) {
+            topbar.style.transform = "translateY(-100%)";
+            topbar.style.opacity = "0";
+            navbar.classList.add("scrolled");
+        }
     } else {
         topbar.style.transform = "translateY(0)";
         topbar.style.opacity = "1";
         navbar.classList.remove("scrolled");
     }
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const scheduleItems = document.querySelectorAll('.schedule-item');
@@ -119,21 +101,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Slider
-document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".tracks-slider", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        }
-    });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     var swiper = new Swiper(".tracks-slider", {
+//         slidesPerView: 1,
+//         spaceBetween: 20,
+//         loop: true,
+//         autoplay: {
+//             delay: 2500,
+//             disableOnInteraction: false,
+//         },
+//         pagination: {
+//             el: ".swiper-pagination",
+//             clickable: true,
+//         }
+//     });
+// });
 
 // Initialize Element SDK
 const defaultConfig = {
@@ -258,75 +240,51 @@ function mapToEditPanelValues(config) {
 }
 
 // Initialize Element SDK
-if (window.elementSdk) {
-    window.elementSdk.init({
-        defaultConfig,
-        onConfigChange,
-        mapToCapabilities,
-        mapToEditPanelValues
-    });
-}
+// if (window.elementSdk) {
+//     window.elementSdk.init({
+//         defaultConfig,
+//         onConfigChange,
+//         mapToCapabilities,
+//         mapToEditPanelValues
+//     });
+// }
 
 // GSAP Animations
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // Initial hero animations
-gsap.from('.hero-title', {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    ease: 'power3.out',
-    delay: 0.3
-});
+// gsap.from('.hero-title', {
+//     duration: 1,
+//     y: 50,
+//     opacity: 0,
+//     ease: 'power3.out',
+//     delay: 0.3
+// });
 
-gsap.from('.hero-tagline', {
-    duration: 1,
-    y: 30,
-    opacity: 0,
-    ease: 'power3.out',
-    delay: 0.5
-});
+// gsap.from('.hero-tagline', {
+//     duration: 1,
+//     y: 30,
+//     opacity: 0,
+//     ease: 'power3.out',
+//     delay: 0.5
+// });
 
-gsap.from('.hero-description', {
-    duration: 1,
-    y: 30,
-    opacity: 0,
-    ease: 'power3.out',
-    delay: 0.7
-});
+// gsap.from('.hero-description', {
+//     duration: 1,
+//     y: 30,
+//     opacity: 0,
+//     ease: 'power3.out',
+//     delay: 0.7
+// });
 
-gsap.from('.hero-btn', {
-    duration: 0.8,
-    y: 30,
-    opacity: 0,
-    ease: 'power3.out',
-    stagger: 0.2,
-    delay: 0.9
-});
-
-// Scroll-based animations
-// let lastScrollY = 0;
-const topbar = document.getElementById('topbar');
-const navbar = document.getElementById('navbar');
-
-// Mobile menu toggle
-const mobileToggle = document.getElementById('mobileToggle');
-const navLinks = document.getElementById('navLinks');
-const navAuth = document.getElementById('navAuth');
-
-mobileToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-active');
-    navAuth.classList.toggle('mobile-active');
-
-    const icon = mobileToggle.querySelector('i');
-    if (navLinks.classList.contains('mobile-active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
+// gsap.from('.hero-btn', {
+//     duration: 0.8,
+//     y: 30,
+//     opacity: 0,
+//     ease: 'power3.out',
+//     stagger: 0.2,
+//     delay: 0.9
+// });
 
 // Active link highlighting and mobile menu closing
 document.querySelectorAll('.nav-link-item').forEach(link => {
@@ -350,7 +308,7 @@ document.querySelectorAll('.nav-link-item').forEach(link => {
 // Horizontal Objectives Animation
 // Ye script apne page ke end mein add karein (before </body>)
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
     const section = document.querySelector(".mission-section");
